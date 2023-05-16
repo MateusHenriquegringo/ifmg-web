@@ -1,0 +1,8 @@
+{% extends "layout.html" %}
+{%block body%}
+
+<form action="/enviaformulario" method="post">
+    <input type="text" name="nome_pessoa" placeholder="digite seu nome">
+    <input type="submit" value="Enviar">
+</form>
+{% endblock %}

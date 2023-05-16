@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let lista = []
+        let entrada = prompt('digite itens para comprar ou insira "-"para terminal e "r"para retiar')
+
+
+        while (entrada!=='-') {
+        if (entrada == 'r'){
+         lista.pop(entrada)
+         entrada = prompt('digite itens para comprar ou insira "-"para terminal')
+        }
+        else{
+        lista.push(entrada)
+        entrada = prompt('digite itens para comprar ou insira "-"para terminal')
+        }
+        }
+
+
+        for(let i = 0; i<lista.length;i++){
+            alert(lista[i])
+        }
+    
+    </script>
+</body>
+</html>

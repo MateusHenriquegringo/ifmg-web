@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       /* let contato = [
+            {
+            'nome':'mateus',
+            'telefone':'96854380',
+            'dizerOi':function(){
+                alert('oi eu sou '+this.nome)
+            }},
+            {
+            'nome':'joao',
+            'telefone':'96854380',
+            'dizerOi':function(){
+                alert('oi eu sou '+this.nome)
+            }
+        }]
+        contato[1].dizerOi()
+        */
+       function buscarCep(){
+        let cep = prompt('cep')
+        let url = "https://brasilapi.com.br/api/cep/v2/"+cep
+        fetch(url)
+        .then(function(response) {
+            response.json().then(function(dados) {
+            console.log(dados);
+        });
+        }).catch(
+        function(err) {
+        console.error('Falhou ao buscar dados', err);
+        }
+        );
+       }
+       buscarCep()
+    </script>
+</body>
+</html>
